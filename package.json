@@ -1,0 +1,28 @@
+{
+  "name": "es2015-quickstart",
+  "version": "0.1.0",
+  "description": "A quick start sample project in ES2015",
+  "author": "Tiny Tiny",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-preset-es2015-node4": "^2.1.0",
+    "babel-register": "^6.14.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "xo": "^0.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gyf1214/es2015-quickstart.git"
+  },
+  "xo": {
+    "space": 2
+  },
+  "babel": {
+    "presets": [
+      "es2015-node4"
+    ]
+  }
+}
