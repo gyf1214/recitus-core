@@ -1,8 +1,6 @@
 import {unlink} from 'fs';
 import Bank from '../lib/bank';
-
-const vocabPath = 'tmp/hello.json';
-const bankPath = 'tmp/bank.json';
+import {vocabPath, bankPath} from './helpers/helper';
 
 describe('Bank', () => {
   var bank;
