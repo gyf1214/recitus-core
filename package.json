@@ -1,7 +1,7 @@
 {
-  "name": "es2015-quickstart",
+  "name": "recitus-core",
   "version": "0.1.0",
-  "description": "A quick start sample project in ES2015",
+  "description": "a reciting library",
   "author": "Tiny Tiny",
   "license": "MIT",
   "devDependencies": {
@@ -24,5 +24,8 @@
     "presets": [
       "es2015-node4"
     ]
+  },
+  "dependencies": {
+    "date-utils": "^1.2.21"
   }
 }
