@@ -1,13 +1,12 @@
 import Bank from './bank';
 import Wordlist from './wordlist';
-import {delta} from './config';
 
 export default class Recitus {
   constructor(vocabPath, bankPath) {
     this.bank = new Bank(vocabPath, bankPath);
   }
 
-  start() {
+  start(delta) {
     var list = this.bank.pickList(delta);
     this.list = new Wordlist(list);
   }

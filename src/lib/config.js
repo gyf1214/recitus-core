@@ -15,5 +15,3 @@ export function newEF(ef, q) {
 export function newI(i, ef) {
   return Math.round(i * ef);
 }
-
-export var delta = 20;

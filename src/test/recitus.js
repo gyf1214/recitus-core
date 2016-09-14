@@ -5,9 +5,11 @@ import {random} from '../lib/util';
 import {vocabPath, bankPath} from './helpers/helper';
 
 describe('recitus', () => {
+  const delta = 5;
+
   it('combines everything', () => {
     var recitus = new Recitus(vocabPath, bankPath);
-    recitus.start();
+    recitus.start(delta);
     var list = recitus.list.list;
     while (!recitus.empty()) {
       var word = recitus.pick();
