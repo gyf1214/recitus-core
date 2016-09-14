@@ -16,9 +16,7 @@ describe('Wordlist', () => {
   });
 
   it('picks a word at random', () => {
-    word.should.have.property('index');
-    word.should.have.property('ef');
-    word.should.have.property('i');
+    word.should.have.properties('index', 'ef', 'i');
     list.list.should.not.containEql(word);
   });
 
