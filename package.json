@@ -1,7 +1,7 @@
 {
   "name": "recitus-core",
   "version": "0.1.0",
-  "description": "a reciting library",
+  "description": "a reciting library based on supermemo 2",
   "author": "Tiny Tiny",
   "license": "MIT",
   "devDependencies": {
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gyf1214/es2015-quickstart.git"
+    "url": "https://github.com/gyf1214/recitus-core"
   },
   "xo": {
     "space": 2,
@@ -45,5 +45,6 @@
   },
   "directories": {
     "lib": "./lib"
-  }
+  },
+  "main": "./lib/recitus"
 }
