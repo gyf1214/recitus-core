@@ -33,7 +33,7 @@ describe('Wordlist', () => {
     list.list.should.containEql(word);
   });
 
-  it('remove the word and update I & expire with q > 3', () => {
+  it('remove the word and update i & expire with q > 3', () => {
     var q = random(4, 6);
     var i = word.i;
     list.update(q);
