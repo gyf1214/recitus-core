@@ -11,6 +11,9 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-sourcemaps": "^1.6.0",
+    "mocha": "^3.0.2",
+    "should": "^11.1.0",
+    "source-map-support": "^0.4.2",
     "xo": "^0.16.0"
   },
   "repository": {
@@ -18,7 +21,15 @@
     "url": "https://github.com/gyf1214/es2015-quickstart.git"
   },
   "xo": {
-    "space": 2
+    "space": 2,
+    "global": [
+      "describe",
+      "it",
+      "beforeEach",
+      "afterEach",
+      "before",
+      "after"
+    ]
   },
   "babel": {
     "presets": [
@@ -26,6 +37,13 @@
     ]
   },
   "dependencies": {
-    "date-utils": "^1.2.21"
+    "date-utils": "^1.2.21",
+    "debug": "^2.2.0"
+  },
+  "scripts": {
+    "test": "DEBUG=$DEBUG,recitus:test mocha test --reporter spec --require ./test/helpers/helper"
+  },
+  "directories": {
+    "lib": "./lib"
   }
 }
