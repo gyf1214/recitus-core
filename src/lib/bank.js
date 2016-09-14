@@ -1,16 +1,23 @@
 import {writeFileSync, readFileSync, existsSync} from 'fs';
-import {defaultEF, defaultI} from './config';
+import 'date-utils';
+import {algo} from './config';
 import {sample} from './util';
 
-export class Bank {
+export default class Bank {
   constructor(vocabPath, bankPath) {
     this.bankPath = bankPath;
     this.vocab = JSON.parse(readFileSync(vocabPath));
     if (existsSync(bankPath)) {
       this.bank = JSON.parse(readFileSync(bankPath));
+      for (let k = 0; k < this.bank.length; ++k) {
+        if (this.bank[k].expire) {
+          this.bank[k].expire = new Date(this.bank[k].expire);
+        }
+      }
     } else {
-      for (var k = 0; k < vocabPath.length; ++k) {
-        this.bank.push({index: k, ef: defaultEF, i: defaultI});
+      this.bank = [];
+      for (let k = 0; k < this.vocab.length; ++k) {
+        this.bank.push({index: k, ef: algo.defaultEF, i: algo.defaultI});
       }
     }
   }
@@ -30,6 +37,6 @@ export class Bank {
   }
 
   update() {
-    writeFileSync(this.bankPath, JSON.stringify(this.Bank));
+    writeFileSync(this.bankPath, JSON.stringify(this.bank));
   }
 }
