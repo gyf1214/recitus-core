@@ -6,11 +6,13 @@ Based on [SuperMemo 2](https://www.supermemo.com/english/ol/sm2.htm) algorithm.
 
 ## Build ##
 
+It is published through `npm` now.
+
+If you want to build it yourself, use `gulp`:
+
     npm install
 
     gulp build
-
-It is planned to be published through `npm`.
 
 ## API ##
 
