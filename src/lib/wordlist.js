@@ -22,7 +22,7 @@ export default class Wordlist {
     if (q <= 3) {
       this.list.push(cur);
     } else {
-      cur.expire = Date.today().addDays(cur.i);
+      cur.expire = Date.today().addDays(Math.round(cur.i));
     }
   }
 
