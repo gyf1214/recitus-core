@@ -39,7 +39,7 @@ describe('Wordlist', () => {
     list.update(q);
     list.list.should.not.containEql(word);
     word.should.have.property('i', newI(i, word.ef));
-    word.should.have.property('expire', Date.today().addDays(word.i));
+    word.should.have.property('expire', Date.today().addDays(Math.round(word.i)));
   });
 
   it('reset i to 1 with q < 3', () => {
