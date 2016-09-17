@@ -1,5 +1,7 @@
 # Recitus #
 
+[![Build Status](https://travis-ci.org/gyf1214/recitus-core.svg?branch=master)](https://travis-ci.org/gyf1214/recitus-core)
+
 A library used to recite things.
 
 Based on [SuperMemo 2](https://www.supermemo.com/english/ol/sm2.htm) algorithm.
