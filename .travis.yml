@@ -1,1 +1,9 @@
 language: node_js
+node_js:
+  - "node"
+install:
+  - npm install
+  - npm install -g gulp
+  - gulp build
+script:
+  - npm test
